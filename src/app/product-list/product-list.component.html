@@ -1,0 +1,14 @@
+<h2>Products</h2>
+
+<div *ngFor="let titlerow of titlerows">
+  <h3>
+    <a [title]="titlerow.Name + ' details'">
+      {{ titlerow.Name }}
+    </a>
+  </h3>
+
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+  <div class="card"><h2>Card</h2></div>
+
+</div>
