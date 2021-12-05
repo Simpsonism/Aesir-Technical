@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="body-bg-color">            
+          
+      <div class="clearfix">
+          <div id="marketApp" style="display:none;" class="col-xs-12 tb-padding-15 animated fadeIn">
+              <div class="banner-img clearfix" style="background-color:black;">
+                  <button type="button" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></span></button>
+                  <a href="https://www.hidive.com/simulcasts?utm_medium=display&amp;utm_source=hidive&amp;utm_campaign=fallsimulcasts2021">
+                          <img src="//static.hidive.com/slides/2021/10.%20October/Fall21Simul_GlobalBanner_OptE.gif" class="img-responsive hidden-xs" alt="simulcasts"/>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="center pad">
+        <img src="//static.hidive.com/slides/2021/10.%20October/Fall21Simul_GlobalBanner_OptE.gif">
+      </div>
+
+          <owl-carousel-o [options]="simulcastOptions">
+              <ng-template carouselSlide>
+                  <img src="//static.hidive.com/slides/2021/10.%20October/HD_Carousel_Fall21Simul_Neon.gif">
+              </ng-template>  
+              <ng-template carouselSlide>
+                  <img src="//static.hidive.com/slides/2021/10.%20October/HD_Carousel_LupinTheThirdPart6">
+              </ng-template>
+          </owl-carousel-o>
+
+      <div *ngFor="let titlerow of titlerows">
+          <h3>
+          <a class="title-style">
+              {{ titlerow.Name }}
+          </a>
+          </h3>
+
+      <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let slide of titlerow.Titles">
+          <ng-template carouselSlide [Id]="slide.Id">
+            <div class="clickbox">
+                <img class="pad" [src]="slide.MasterArtUrl" [alt]="slide.ShortSynopsis" [title]="slide.Name" style="object-fit: contain;">
+            </div>
+        </ng-template>
+          </ng-container>
+      
+      </owl-carousel-o>
+      </div>
+
+      <footer class="tb-padding-10 overflow-auto">
+          <div class="col-md-10">
+              <ul class="list-inline">
+                  <li><a id="footerSignup" href="/signup">Sign Up</a></li>
+                  <span>  |</span>
+                  <li><a href="//help.hidive.com/" target="_blank">Help Center <span class="visuallyhidden">, opens in a new window</span></a></li>
+                  <span>  |</span>
+                  <li><a href="/about">About Us</a></li>
+                  <span>  |</span>
+                  <li><a id="contactUs" href="javascript:void(0);">Contact Us</a></li>
+                  <span>  |</span>
+                  <li><a href="/careers">Careers</a></li>
+                  <span>  |</span>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <span>  |</span>
+                  <li><a href="/terms-of-use">Terms of Use</a></li>
+                  <span>  |</span>
+                  <li>
+                      <a href="/news/press">Press</a>
+                  </li>
+                  <span>  |</span>
+                  <li>
+                      <a href="/devices">Devices</a>
+                  </li>
+                  <span>  |</span>
+                  <li>
+                      <a href="/accessibility">Accessibility</a>
+                  </li>
+                  <span>  |</span>
+                  <li>
+                      <a href="/sitemap">Sitemap</a>
+                  </li>
+              </ul>
+              <ul class="list-inline">
+                  <li>HIDIVE and the logos &trade; and &copy; HIDIVE, LLC. <span><em style="color:transparent;"></em></span></li>
+              </ul>
+          </div>
+          <div class="col-md-2 text-right">
+              <div></div>
+          </div>
+      </footer>
+  </div>
+</div>

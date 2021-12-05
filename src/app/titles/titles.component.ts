@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+
 import { titlerows } from '../titleRows';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-top-bar',
-  templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  selector: 'app-product-list',
+  templateUrl: './titles.component.html',
+  styleUrls: ['./titles.component.css']
 })
 
-export class TopBarComponent {
+export class Titles {
   titlerows = titlerows;
-
+  
   simulcastOptions: OwlOptions = {
+    autoplay: true,
+    autoplaySpeed: 1000,
     loop: true,
     mouseDrag: false,
     touchDrag: false,
@@ -19,8 +23,21 @@ export class TopBarComponent {
     dots: true,
     navSpeed: 700,
     navText: ['', ''],
-    items: 1,
-    nav: true
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      1100: {
+        items: 1
+      }
+    },
+    nav: false
   }
 
   customOptions: OwlOptions = {
